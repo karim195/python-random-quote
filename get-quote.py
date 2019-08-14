@@ -1,11 +1,12 @@
+import random
+
 def start():
-    print("Keep it logically awesome.")
+    file = open("quotes.txt")
+    quotes = file.readlines()
+    file.close()
 
-    # f = open("quotes.txt")
-    # quotes = f.readlines()
-    # f.close()
-
-    # print(quotes)
+    random_number = random.randint(0, len(quotes)-1)
+    print(quotes[random_number])
 
 
 if __name__ == "__main__":
